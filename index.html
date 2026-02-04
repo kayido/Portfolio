@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Étudiant Big Data & ML</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="data-icon">📊</span>
+                <span class="name">KOLAT</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#profil" class="nav-link">Profil</a></li>
+                <li><a href="#competences" class="nav-link">Compétences</a></li>
+                <li><a href="#projets" class="nav-link">Projets</a></li>
+                <li><a href="#experience" class="nav-link">Expérience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="section hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Étudiant en</span>
+                        <span class="title-highlight">Big Data & Machine Learning</span>
+                    </h1>
+                    <p class="hero-subtitle">Passionné par l'analyse de données et l'intelligence artificielle</p>
+                    
+                    <!-- Widget innovant 1: Badge interactif de recherche de stage -->
+                    <div class="widget stage-badge">
+                        <div class="badge-header">
+                            <i class="fas fa-search"></i>
+                            <h3>Recherche de Stage</h3>
+                        </div>
+                        <div class="badge-content">
+                            <p>Disponible à partir de : <strong>[Date]</strong></p>
+                            <p>Durée : <strong>4-6 mois</strong></p>
+                            <div class="badge-progress">
+                                <div class="progress-label">Intensité de recherche</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bloc pour votre photo -->
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="Screenshot 2025-10-21 195802.png" alt="[Votre Nom]">
+                        <!-- Widget innovant 2: Halo de compétences -->
+                        <div class="skills-halo">
+                            <div class="halo-item" data-skill="Python"><span>Cloud</span></div>
+                            <div class="halo-item" data-skill="ML"><span>ML</span></div>
+                            <div class="halo-item" data-skill="Data"><span>Data</span></div>
+                            <div class="halo-item" data-skill="AI"><span>AI</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Profil -->
+    <section id="profil" class="section profile">
+        <div class="container">
+            <h2 class="section-title">Profil</h2>
+            
+            <!-- Widget innovant 3: Carte d'identité interactive -->
+            <div class="widget interactive-card">
+                <div class="card-front">
+                    <div class="card-header">
+                        <h3><i class="fas fa-id-card"></i> Carte d'Identité Professionnelle</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-field">
+                            <span class="field-label">Nom :</span>
+                            <span class="field-value">Fergal Dorian KOLAT DJOKO</span>
+                        </div>
+                        <div class="card-field">
+                            <span class="field-label">Spécialité :</span>
+                            <span class="field-value">Big Data & Machine Learning</span>
+                        </div>
+                        <div class="card-field">
+                            <span class="field-label">École :</span>
+                            <span class="field-value">EFREI Paris</span>
+                        </div>
+                        <div class="card-field">
+                            <span class="field-label">Niveau :</span>
+                            <span class="field-value">Bac +4</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-flip-btn">Voir plus <i class="fas fa-rotate-right"></i></button>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-header">
+                        <h3><i class="fas fa-bullseye"></i> Objectif Professionnel</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Contribuer à des projets concrets de transformation digitale industrielle autour des LLM, du RAG et des solutions Data à impact métier.</p>
+                        <div class="card-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">Transformation Digitale</span>
+                            <span class="tag">Data Impact</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-flip-btn">Retour <i class="fas fa-rotate-left"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Compétences</h2>
+            
+            <!-- Widget innovant 4: Nuage de compétences interactif -->
+            <div class="widget skills-cloud">
+                <div class="cloud-controls">
+                    <button class="cloud-filter active" data-filter="all">Tout</button>
+                    <button class="cloud-filter" data-filter="data">Data Analysis</button>
+                    <button class="cloud-filter" data-filter="bigdata">Big Data</button>
+                    <button class="cloud-filter" data-filter="dev">Développement</button>
+                    <button class="cloud-filter" data-filter="tools">Outils</button>
+                </div>
+                <div class="cloud-container">
+                    <span class="cloud-item" data-category="data" data-level="advanced">Python</span>
+                    <span class="cloud-item" data-category="data" data-level="intermediate">Scikit-Learn</span>
+                    <span class="cloud-item" data-category="data" data-level="advanced">Pandas</span>
+                    <span class="cloud-item" data-category="data" data-level="intermediate">Power BI</span>
+                    <span class="cloud-item" data-category="data" data-level="intermediate">Streamlit</span>
+                    <span class="cloud-item" data-category="bigdata" data-level="advanced">Apache Spark</span>
+                    <span class="cloud-item" data-category="bigdata" data-level="intermediate">Hadoop</span>
+                    <span class="cloud-item" data-category="bigdata" data-level="advanced">SQL</span>
+                    <span class="cloud-item" data-category="bigdata" data-level="intermediate">NoSQL</span>
+                    <span class="cloud-item" data-category="bigdata" data-level="intermediate">MongoDB</span>
+                    <span class="cloud-item" data-category="bigdata" data-level="intermediate">Scala</span>
+                    <span class="cloud-item" data-category="dev" data-level="intermediate">Java Spring Boot</span>
+                    <span class="cloud-item" data-category="dev" data-level="intermediate">Django</span>
+                    <span class="cloud-item" data-category="dev" data-level="intermediate">Node js</span>
+                    <span class="cloud-item" data-category="tools" data-level="advanced">Git/GitHub</span>
+                    <span class="cloud-item" data-category="tools" data-level="expert">Airflow</span>
+                    <span class="cloud-item" data-category="tools" data-level="intermediate">Docker</span>
+                    <span class="cloud-item" data-category="tools" data-level="advanced">Suite Office</span>
+
+                </div>
+                <div class="cloud-legend">
+                    <div class="legend-item">
+                        <span class="legend-color expert"></span>
+                        <span>Expert</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color advanced"></span>
+                        <span>Avancé</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color intermediate"></span>
+                        <span>Intermédiaire</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blocs pour images de certifications -->
+            <div class="certifications-grid">
+                <h3 class="subsection-title">Certifications</h3>
+                <div class="certifications-container">
+                    <div class="certification-item">
+                        <div class="certification-image">
+                            <!-- Insérez vos images de certifications ici -->
+                            <img src="assets/certifs/certif1.png" alt="Certification 1">
+                        </div>
+                        <div class="certification-overlay">
+                            <p>Junior Cybersecurity Analyst Career Path</p>
+                        </div>
+                    </div>
+                    <div class="certification-item">
+                        <div class="certification-image">
+                            <img src="assets/certifs/certif2.png" alt="Certification 2">
+                        </div>
+                        <div class="certification-overlay">
+                            <p>Introduction to Cybersecurity</p>
+                        </div>
+                    </div>
+                    <!-- Ajoutez d'autres certifications -->
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!-- Section Projets -->
+    <section id="projets" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Projets Académiques</h2>
+            
+            <!-- Widget innovant : Grille de projets avec bouton "Voir Plus" -->
+            <div class="widget projects-grid-widget">
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projets visibles par défaut -->
+                    <div class="project-card" data-category="data-pipeline">
+                        <div class="project-image">
+                            <img src="assets/projects/meteoriologique.jpg" alt="Pipeline Météorologique">
+                            <div class="project-overlay">
+                                <span class="project-category">Data Pipeline</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Pipeline de traitement de données météorologiques</h3>
+                            <p class="project-description">
+                                Système de collecte périodique des prévisions météo de différents pays africains avec visualisation Power BI.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PySpark</span>
+                                <span class="tech-tag">Airflow</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Power BI</span>
+                            </div>
+                            <div class="project-features">
+                                <span><i class="fas fa-check-circle"></i> Collecte via API</span>
+                                <span><i class="fas fa-check-circle"></i> Traitement PySpark</span>
+                                <span><i class="fas fa-check-circle"></i> Automatisation Airflow</span>
+                            </div>
+                            <button class="project-details-btn" data-project="meteo">
+                                <i class="fas fa-eye"></i> Détails
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="data-pipeline">
+                        <div class="project-image">
+                            <img src="assets/projects/movielens.png" alt="Pipeline Cinématographique">
+                            <div class="project-overlay">
+                                <span class="project-category">Big Data</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Pipeline de traitement des données cinématographiques</h3>
+                            <p class="project-description">
+                                Pipeline ETL pour traiter les données du dataset MovieLens avec technologies Big Data.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Hadoop</span>
+                                <span class="tech-tag">Spark</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Hive</span>
+                            </div>
+                            <div class="project-features">
+                                <span><i class="fas fa-check-circle"></i> Stockage distribué Hadoop</span>
+                                <span><i class="fas fa-check-circle"></i> Traitement Spark</span>
+                                <span><i class="fas fa-check-circle"></i> Conteneurisation Docker</span>
+                            </div>
+                            <button class="project-details-btn" data-project="cinema">
+                                <i class="fas fa-eye"></i> Détails
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="web-dev">
+                        <div class="project-image">
+                            <img src="projet-ecommerce.jpg" alt="Plateforme E-commerce">
+                            <div class="project-overlay">
+                                <span class="project-category">Développement Web</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Plateforme e-commerce avec Java Spring boot</h3>
+                            <p class="project-description">
+                                API REST complète pour plateforme e-commerce avec authentification, gestion produits et commandes.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java Spring</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">Spring Security</span>
+                                <span class="tech-tag">JPA/Hibernate</span>
+                            </div>
+                            <div class="project-features">
+                                <span><i class="fas fa-check-circle"></i> Authentification sécurisée</span>
+                                <span><i class="fas fa-check-circle"></i> Gestion des rôles</span>
+                                <span><i class="fas fa-check-circle"></i> API externe intégrée</span>
+                            </div>
+                            <button class="project-details-btn" data-project="ecommerce">
+                                <i class="fas fa-eye"></i> Détails
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Projets cachés initialement -->
+                    <div class="project-card hidden" data-category="data-pipeline">
+                        <div class="project-image">
+                            <img src="assets/projects/map.png" alt="Pipeline Scala">
+                            <div class="project-overlay">
+                                <span class="project-category">Scala</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Pipeline de traitement des données des pays en Scala</h3>
+                            <p class="project-description">
+                                Développement d'un pipeline de traitement de données géographiques en Scala avec Spark.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Scala</span>
+                                <span class="tech-tag">Spark</span>
+                                <span class="tech-tag">ETL</span>
+                                <span class="tech-tag">Data Processing</span>
+                            </div>
+                            <div class="project-features">
+                                <span><i class="fas fa-check-circle"></i> Programmation fonctionnelle</span>
+                                <span><i class="fas fa-check-circle"></i> Optimisation Spark</span>
+                                <span><i class="fas fa-check-circle"></i> Traitement batch</span>
+                            </div>
+                            <button class="project-details-btn" data-project="scala">
+                                <i class="fas fa-eye"></i> Détails
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card hidden" data-category="iot">
+                        <div class="project-image">
+                            <img src="assets/projects/trashero.png" alt="Détection Poubelles">
+                            <div class="project-overlay">
+                                <span class="project-category">IoT & DataViz</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Plateforme de Détection intelligente des états des poubelles publiques</h3>
+                            <p class="project-description">
+                                Plateforme de collecte et visualisation des données des poubelles pour optimiser la gestion urbaine.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">Data Visualization</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Scikit-Learn</span>
+                                <span class="tech-tag">Chart.js</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                            <div class="project-features">
+                                <span><i class="fas fa-check-circle"></i> Cartographie des zones à risque</span>
+                                <span><i class="fas fa-check-circle"></i> Collecte de données temps réel</span>
+                                <span><i class="fas fa-check-circle"></i> API Django backend</span>
+                                <span><i class="fas fa-check-circle"></i> Traitement d'images</span>
+                                <span><i class="fas fa-check-circle"></i> Classification ML</span>
+                                <span><i class="fas fa-check-circle"></i> Visualisation Chart.js</span>
+                            </div>
+                            <button class="project-details-btn" data-project="poubelles">
+                                <i class="fas fa-eye"></i> Détails
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Contrôles de la grille de projets -->
+                <div class="projects-controls">
+                    <div class="projects-filter">
+                        <button class="filter-btn active" data-filter="all">Tous les projets</button>
+                        <button class="filter-btn" data-filter="data-pipeline">Data Pipelines</button>
+                        <button class="filter-btn" data-filter="web-dev">Développement Web</button>
+                        <button class="filter-btn" data-filter="iot">IoT & DataViz</button>
+                        <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
+                    </div>
+                    
+                    <!-- Bouton Voir Plus -->
+                    <div class="projects-more">
+                        <button class="more-projects-btn" id="moreProjectsBtn">
+                            <i class="fas fa-plus"></i> Voir plus de projets
+                            <span class="projects-count">(+3 projets)</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Modal pour détails du projet -->
+                <div class="project-modal" id="projectModal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 id="modalProjectTitle">Titre du Projet</h2>
+                            <button class="modal-close" id="modalClose">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-image">
+                                <img id="modalProjectImage" src="" alt="Projet">
+                            </div>
+                            <div class="modal-details">
+                                <div class="modal-description" id="modalProjectDescription"></div>
+                                <div class="modal-tech" id="modalProjectTech"></div>
+                                <div class="modal-features">
+                                    <h3><i class="fas fa-tasks"></i> Fonctionnalités</h3>
+                                    <ul id="modalProjectFeatures"></ul>
+                                </div>
+                                <div class="modal-links">
+                                    <button class="modal-link-btn">
+                                        <i class="fab fa-github"></i> Code Source
+                                    </button>
+                                    <button class="modal-link-btn">
+                                        <i class="fas fa-external-link-alt"></i> Démo Live
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expérience -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">Expérience Professionnelle</h2>
+            
+            <!-- Widget innovant 6: Carte expérience avec métriques -->
+            <div class="widget experience-card">
+                <div class="experience-header">
+                    <h3><i class="fas fa-briefcase"></i> Développeur Web Stagiaire</h3>
+                    <div class="experience-period">Jul-23 – Sep-23</div>
+                </div>
+                <div class="experience-company">
+                    <i class="fas fa-building"></i> AFRICA'S SERVICES
+                </div>
+                <div class="experience-metrics">
+                    <div class="metric">
+                        <div class="metric-value">3</div>
+                        <div class="metric-label">Missions principales</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">3</div>
+                        <div class="metric-label">Mois</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Projet livré</div>
+                    </div>
+                </div>
+                <div class="experience-tasks">
+                    <h4>Missions réalisées :</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Conception des supports marketing visuels avec Photoshop</li>
+                        <li><i class="fas fa-check-circle"></i> Analyse des besoins métiers pour création de site web</li>
+                        <li><i class="fas fa-check-circle"></i> Réalisation d'études de marché et analyse concurrentielle</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Section Parcours Académique -->
+    <section id="parcours" class="section academic">
+        <div class="container">
+            <h2 class="section-title">Parcours Académique</h2>
+            
+            <!-- Widget innovant : Timeline académique interactive -->
+            <div class="widget academic-timeline">
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Sep-24 – Oct-27</div>
+                        <div class="timeline-content">
+                            <div class="academic-header">
+                                <h3>Programme grande École d'ingénieurs (Bac +3 à +5)</h3>
+                                <span class="academic-school">Efrei Paris</span>
+                            </div>
+                            <div class="academic-details">
+                                <div class="academic-badges">
+                                    <span class="academic-badge">Big Data</span>
+                                    <span class="academic-badge">Machine Learning</span>
+                                    <span class="academic-badge">Cloud Computing</span>
+                                </div>
+                                <ul class="academic-courses">
+                                    <li><i class="fas fa-chart-line"></i> Data Analysis and visualization</li>
+                                    <li><i class="fas fa-brain"></i> Machine Learning, Framework Big data</li>
+                                    <li><i class="fas fa-cloud"></i> Cloud computing (Azure AWS), virtualisation</li>
+                                    <li><i class="fas fa-code"></i> API and Webservices, développement Web</li>
+                                    <li><i class="fas fa-graduation-cap"></i> Master Camp en Data Science</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Oct-22 - Juil-24</div>
+                        <div class="timeline-content">
+                            <div class="academic-header">
+                                <h3>BTS en Génie Logiciel</h3>
+                                <span class="academic-school">Institut Supérieur de Management et de l'Entrepreneuriat (IME)</span>
+                            </div>
+                            <div class="academic-details">
+                                <div class="academic-badges">
+                                    <span class="academic-badge">Développement</span>
+                                    <span class="academic-badge">Conception</span>
+                                    <span class="academic-badge">Gestion de projet</span>
+                                </div>
+                                <ul class="academic-courses">
+                                    <li><i class="fas fa-laptop-code"></i> Conception et développement des solutions logiciels</li>
+                                    <li><i class="fas fa-database"></i> Modélisation des données</li>
+                                    <li><i class="fas fa-project-diagram"></i> Gestion de projet (Méthodes Agiles)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Widget: Radar des compétences académiques -->
+                <div class="academic-radar">
+                    <h3><i class="fas fa-radar"></i> Compétences Académiques</h3>
+                    <div class="radar-chart">
+                        <canvas id="academicRadar"></canvas>
+                    </div>
+                    <div class="radar-legend">
+                        <div class="legend-item"><span class="legend-color" style="background-color: #2563eb;"></span> Niveau Actuel</div>
+                        <div class="legend-item"><span class="legend-color" style="background-color: #7c3aed;"></span> Objectif Final</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            
+            <!-- Widget innovant 7: Carte de contact interactive -->
+            <div class="widget contact-card">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>votre.email@domain.com</p>
+                        </div>
+                        <button class="copy-btn" data-text="votre.email@domain.com">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+33 XX XX XX XX XX</p>
+                        </div>
+                        <button class="copy-btn" data-text="+33XXXXXXXXX">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>/in/votreprofil</p>
+                        </div>
+                        <button class="link-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                        </button>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>/votrepseudo</p>
+                        </div>
+                        <button class="link-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Widget innovant 8: Barre d'état de disponibilité -->
+                <div class="availability-widget">
+                    <div class="availability-status">
+                        <div class="status-indicator available"></div>
+                        <span>Disponible pour un stage</span>
+                    </div>
+                    <div class="availability-details">
+                        <p>Recherche un stage de 4 à 6 mois en Data Science / Machine Learning</p>
+                        <p>Période : <strong>[Date début] - [Date fin]</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2026 Fergal Dorian KOLAT DJOKO. Tous droits réservés.</p>
+                <p>Portfolio conçu avec ❤️ et du code</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>
