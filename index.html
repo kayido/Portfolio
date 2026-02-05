@@ -45,11 +45,29 @@
                     <div class="widget stage-badge">
                         <div class="badge-header">
                             <i class="fas fa-search"></i>
-                            <h3>Recherche de Stage</h3>
+                            <h3>Recherche de Stage alterné</h3>
                         </div>
                         <div class="badge-content">
-                            <p>Disponible à partir de : <strong>[Date]</strong></p>
-                            <p>Durée : <strong>4-6 mois</strong></p>
+                            <p>Disponible à partir de : <strong>01/02/2026</strong></p>
+                            <p>Durée : <strong>3-6 mois</strong></p>
+                            <p>Rythme : <strong>3 jours en entreprise / 02 jours à école</strong></p>
+                            <div class="badge-progress">
+                                <div class="progress-label">Intensité de recherche</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget stage-badge">
+                        <div class="badge-header">
+                            <i class="fas fa-search"></i>
+                            <h3>Recherche d'une alternance</h3>
+                        </div>
+                        <div class="badge-content">
+                            <p>Disponible à partir de : <strong>01/09/2026</strong></p>
+                            <p>Durée : <strong>12 mois</strong></p>
+                            <p>Rythme : <strong>3 jours en entreprise / 02 jours à école</strong></p>
                             <div class="badge-progress">
                                 <div class="progress-label">Intensité de recherche</div>
                                 <div class="progress-bar">
@@ -385,44 +403,46 @@
                     <div class="projects-more">
                         <button class="more-projects-btn" id="moreProjectsBtn">
                             <i class="fas fa-plus"></i> Voir plus de projets
-                            <span class="projects-count">(+3 projets)</span>
+                            <span class="projects-count">(+ projets)</span>
                         </button>
                     </div>
                 </div>
                 
-                <!-- Modal pour détails du projet -->
-                <div class="project-modal" id="projectModal">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 id="modalProjectTitle">Titre du Projet</h2>
-                            <button class="modal-close" id="modalClose">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="modal-image">
-                                <img id="modalProjectImage" src="" alt="Projet">
-                            </div>
-                            <div class="modal-details">
-                                <div class="modal-description" id="modalProjectDescription"></div>
-                                <div class="modal-tech" id="modalProjectTech"></div>
-                                <div class="modal-features">
-                                    <h3><i class="fas fa-tasks"></i> Fonctionnalités</h3>
-                                    <ul id="modalProjectFeatures"></ul>
-                                </div>
-                                <div class="modal-links">
-                                    <button class="modal-link-btn">
-                                        <i class="fab fa-github"></i> Code Source
-                                    </button>
-                                    <button class="modal-link-btn">
-                                        <i class="fas fa-external-link-alt"></i> Démo Live
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Modal de détails du projet -->
+
+            </div>
+        </div>
+    </section>
+    <!-- Modal pour détails du projet -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalProjectTitle">Titre du Projet</h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalProjectImage" src="" alt="Projet">
+                </div>
+                <div class="modal-details">
+                    <div class="modal-description" id="modalProjectDescription"></div>
+                    <div class="modal-tech" id="modalProjectTech"></div>
+                    <div class="modal-features">
+                        <h3><i class="fas fa-tasks"></i> Fonctionnalités</h3>
+                        <ul id="modalProjectFeatures"></ul>
+                    </div>
+                    <div class="modal-links">
+                        <button class="modal-link-btn" id="modalGithubButton">
+                            <i class="fab fa-github"></i> Code Source
+                        </button>
+                        <button class="modal-link-btn" id="modalDemoButton">
+                            <i class="fas fa-external-link-alt"></i> Démo Live
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+                </div>
 
     <!-- Section Expérience -->
     <section id="experience" class="section experience">
@@ -546,9 +566,9 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>votre.email@domain.com</p>
+                            <p>kolatd51@gmail.com</p>
                         </div>
-                        <button class="copy-btn" data-text="votre.email@domain.com">
+                        <button class="copy-btn" data-text="kolatd51@gmail.com">
                             <i class="fas fa-copy"></i>
                         </button>
                     </div>
@@ -556,9 +576,9 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>Téléphone</h4>
-                            <p>+33 XX XX XX XX XX</p>
+                            <p>+33 07 66 40 24 39</p>
                         </div>
-                        <button class="copy-btn" data-text="+33XXXXXXXXX">
+                        <button class="copy-btn" data-text="+330766402439">
                             <i class="fas fa-copy"></i>
                         </button>
                     </div>
@@ -566,7 +586,7 @@
                         <i class="fab fa-linkedin"></i>
                         <div>
                             <h4>LinkedIn</h4>
-                            <p>/in/votreprofil</p>
+                            <p>in/fergal-dorian-kolat-djoko-466973332/</p>
                         </div>
                         <button class="link-btn">
                             <i class="fas fa-external-link-alt"></i>
@@ -576,7 +596,7 @@
                         <i class="fab fa-github"></i>
                         <div>
                             <h4>GitHub</h4>
-                            <p>/votrepseudo</p>
+                            <p>/kayido</p>
                         </div>
                         <button class="link-btn">
                             <i class="fas fa-external-link-alt"></i>
@@ -591,8 +611,8 @@
                         <span>Disponible pour un stage</span>
                     </div>
                     <div class="availability-details">
-                        <p>Recherche un stage de 4 à 6 mois en Data Science / Machine Learning</p>
-                        <p>Période : <strong>[Date début] - [Date fin]</strong></p>
+                        <p>Recherche un stage de 3 à 6 mois en Data Science / Machine Learning</p>
+                        <!-- <p>Période : <strong>[Date début] - [Date fin]</strong></p> -->
                     </div>
                 </div>
             </div>

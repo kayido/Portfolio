@@ -142,9 +142,9 @@ linkButtons.forEach(button => {
         
         let url = '';
         if (platform === 'LinkedIn') {
-            url = 'https://linkedin.com/in/votreprofil';
+            url = 'https://linkedin.com/in/fergal-dorian-kolat-djoko-466973332';
         } else if (platform === 'GitHub') {
-            url = 'https://github.com/votrepseudo';
+            url = 'https://github.com/kayido';
         }
         
         if (url) {
@@ -235,7 +235,7 @@ let allProjectsVisible = false;
 const projectsData = {
     meteo: {
         title: "Pipeline de traitement de données météorologiques",
-        image: "projet-meteo.jpg",
+        image: "assets/projects/meteoriologique.jpg",
         description: "Mise sur pied d'un système permettant de collecter périodiquement les prévisions de météo de différents pays africains et de les visualiser dans un rapport dans Power BI. Collecte des données brutes via API, traitement avec PySpark, stockage dans PostgreSQL, automatisation de ce processus avec Apache Airflow et visualisation des données stockées sur Power BI.",
         tech: ['Python', 'PySpark', 'Apache Airflow', 'PostgreSQL', 'Power BI', 'API'],
         features: [
@@ -245,11 +245,12 @@ const projectsData = {
             "Stockage dans base de données PostgreSQL",
             "Visualisation interactive avec Power BI",
             "Dashboard temps réel pour analyse"
-        ]
+        ],
+        demo : false
     },
     cinema: {
         title: "Pipeline de traitement des données cinématographiques",
-        image: "projet-cinema.jpg",
+        image: "assets/projects/movielens.jpg",
         description: "Pipeline ETL permettant de traiter les données cinématographiques issues du dataset MovieLens. Utilisation de Hadoop pour le stockage distribué des fichiers, Spark pour le traitement des données, Docker pour la gestion des conteneurs, et Hive pour leur manipulation en SQL ainsi que leur stockage direct dans la base de données.",
         tech: ['Hadoop', 'Apache Spark', 'Docker', 'Hive', 'ETL', 'Big Data'],
         features: [
@@ -260,6 +261,7 @@ const projectsData = {
             "Requêtage SQL avec Hive",
             "Pipeline ETL optimisé"
         ]
+        ,demo : false
     },
     ecommerce: {
         title: "Plateforme e-commerce avec Java Spring boot",
@@ -273,11 +275,12 @@ const projectsData = {
             "Intégration paiement externe",
             "Base de données relationnelle",
             "Architecture microservices"
-        ]
+        ],
+        demo : false
     },
     scala: {
         title: "Pipeline de traitement des données des pays en Scala",
-        image: "projet-scala.jpg",
+        image: "assets/projects/map.png",
         description: "Développement d'un pipeline de traitement de données géographiques et démographiques en Scala utilisant Apache Spark. Le pipeline inclut le nettoyage, la transformation et l'agrégation de données sur les pays du monde entier.",
         tech: ['Scala', 'Apache Spark', 'Functional Programming', 'ETL', 'Data Processing'],
         features: [
@@ -287,41 +290,33 @@ const projectsData = {
             "Aggrégation de données complexes",
             "Optimisation des performances",
             "Code scalable et maintenable"
-        ]
+        ],
+        demo : false
     },
     poubelles: {
         title: "Plateforme de Détection intelligente des états des poubelles publiques",
-        image: "projet-poubelles.jpg",
+        image: "assets/projects/trashero.png",
         description: "Plateforme conçue pour collecter les données des états poubelles sur un territoire spécifique (Île-de-France) et de cartographier les zones à hauts risques de naissance de dépôts sauvages à partir des données collectées. Utilisation de Django pour la création de la plateforme web et des API backend.",
-        tech: ['Django', 'Python', 'JavaScript', 'API', 'Data Visualization', 'IoT'],
+        tech: ['Django', 'Python', 'JavaScript', 'API', 'Data Visualization' , 'OpenCV', 'Scikit-Learn', 'Python', 'Chart.js'],
         features: [
             "Cartographie interactive des zones à risque",
             "Collecte de données en temps réel",
             "API REST avec Django REST Framework",
             "Dashboard d'administration",
             "Alertes automatiques",
-            "Optimisation des tournées de collecte"
-        ]
-    },
-    opencv: {
-        title: "Analyse des images avec OpenCV et classification avec Scikit-Learn",
-        image: "projet-opencv.jpg",
-        description: "Système de traitement d'images utilisant OpenCV pour l'extraction de caractéristiques, suivi d'une classification avec différents algorithmes de Machine Learning de Scikit-Learn. Visualisation des résultats avec Chart.js pour une analyse interactive.",
-        tech: ['OpenCV', 'Scikit-Learn', 'Python', 'Chart.js', 'Machine Learning', 'Computer Vision'],
-        features: [
             "Traitement d'images avec OpenCV",
-            "Extraction de caractéristiques",
-            "Classification avec plusieurs algorithmes ML",
-            "Comparaison de performances",
-            "Visualisation interactive Chart.js",
-            "Interface utilisateur web"
-        ]
+            "Classification ML avec Scikit-Learn",
+            "Visualisation des résultats avec Chart.js"
+
+        ],
+        demo : false
     }
 };
 
 // Fonction pour afficher plus de projets
+const hiddenProjects = document.querySelectorAll('.project-card.hidden');
+
 function showMoreProjects() {
-    const hiddenProjects = document.querySelectorAll('.project-card.hidden');
     
     if (allProjectsVisible) {
         // Cacher les projets supplémentaires
@@ -331,6 +326,7 @@ function showMoreProjects() {
                 project.style.display = 'none';
             }, index * 100);
         });
+        console.log(allProjectsVisible)
         moreProjectsBtn.innerHTML = '<i class="fas fa-plus"></i> Voir plus de projets <span class="projects-count">(+3 projets)</span>';
         allProjectsVisible = false;
     } else {
@@ -347,6 +343,8 @@ function showMoreProjects() {
                 }, 50);
             }, index * 150);
         });
+      
+
         moreProjectsBtn.innerHTML = '<i class="fas fa-minus"></i> Voir moins de projets';
         allProjectsVisible = true;
     }
@@ -421,6 +419,14 @@ function showProjectDetails(projectId) {
         li.textContent = feature;
         featuresContainer.appendChild(li);
     });
+    // Edit button
+    const demoButton = document.getElementById('modalDemoButton');
+    const githubButton = document.getElementById('modalGithubButton');
+
+    if (!project.demo) {
+        demoButton.style.display = 'none';
+    }
+
     
     // Afficher la modal
     document.getElementById('projectModal').classList.add('active');
@@ -500,7 +506,7 @@ function initializeAcademicRadar() {
             labels: ['Big Data', 'ML/AI', 'Cloud', 'Dev Web', 'Bases de Données', 'Gestion Projet'],
             datasets: [{
                 label: 'Niveau Actuel',
-                data: [85, 80, 70, 75, 85, 80],
+                data: [85, 86, 74, 79, 85, 80],
                 backgroundColor: 'rgba(37, 99, 235, 0.2)',
                 borderColor: '#2563eb',
                 borderWidth: 2,
