@@ -282,10 +282,9 @@ const projectsData = {
         title: "Pipeline de traitement des données des pays en Scala",
         image: "assets/projects/map.png",
         description: "Développement d'un pipeline de traitement de données géographiques et démographiques en Scala utilisant Apache Spark. Le pipeline inclut le nettoyage, la transformation et l'agrégation de données sur les pays du monde entier.",
-        tech: ['Scala', 'Apache Spark', 'Functional Programming', 'ETL', 'Data Processing'],
+        tech: ['Scala', 'Functional Programming', 'ETL', 'Data Processing'],
         features: [
             "Programmation fonctionnelle Scala",
-            "Traitement distribué Spark",
             "Nettoyage et transformation données",
             "Aggrégation de données complexes",
             "Optimisation des performances",
@@ -310,6 +309,23 @@ const projectsData = {
 
         ],
         demo : false
+    },
+    carburants : {
+        title: "Plateforme de visualisation des prix des carburants en France",
+        image: "assets/projects/carburant.png",
+        description: "Plateforme de visualisation des données de prix des carburants en France pour analyser les tendances et variations géographiques. Utilisation de Streamlit pour la création de la plateforme web et l'ensemble des graphiques interactifs.",
+        tech: ['Streamlit', 'Python', 'Pandas', 'Data Visualization'],
+        features: [
+            "Cartographie interactive des prix des carburants",
+            "Nettoyage et analyse des données",
+            "Visualisation des tendances et variations",
+            "dashboard interactif pour l'exploration des données",
+            "exportation de rapports"
+
+        ],
+        demo : true,
+        demoURL : "https://new2cxxtemyjmi9wxif97g.streamlit.app/",
+        GitHubURL : "https://github.com/kayido/streamlit_app-fuel-in-france"
     }
 };
 
@@ -427,7 +443,14 @@ function showProjectDetails(projectId) {
         demoButton.style.display = 'none';
     }
 
-    
+    demoButton.onclick = () => {
+        window.open(project.demoURL, '_blank');
+    };
+    githubButton.onclick = () => {
+        window.open(project.GitHubURL, '_blank');
+    };
+
+
     // Afficher la modal
     document.getElementById('projectModal').classList.add('active');
     document.body.style.overflow = 'hidden'; // Empêcher le scroll
