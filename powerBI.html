@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Power BI Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    h1{
+        color: green;
+        text-align: center;
+        margin-top: 20px;
+        margin-top: 20px;
+    }
+    .report{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .report h2{
+        text-align: center;
+    }
+</style>
 <body>
-    <iframe title="Pharma-Data-Analysis" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMzlhMWI2NjAtMDg3NC00ZDA1LTlhZDUtNTQ1NTQ2NjIyOTQyIiwidCI6IjQxMzYwMGNmLWJkNGUtNGM3Yy04YTYxLTY5ZTczY2RkZjczMSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+    <section class="container">
+        <h1>Power BI Gallery</h1>
+        <div class="report">
+            <h2>Pharma Data Report</h2>
+            <iframe title="Pharma-Data-Analysis" width="960" height="573.5" src="https://app.powerbi.com/view?r=eyJrIjoiMzlhMWI2NjAtMDg3NC00ZDA1LTlhZDUtNTQ1NTQ2NjIyOTQyIiwidCI6IjQxMzYwMGNmLWJkNGUtNGM3Yy04YTYxLTY5ZTczY2RkZjczMSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+        <div class="report">
+            <h2>Bank Data Report</h2>
+            <iframe title="debut" width="960" height="573.5" src="https://app.powerbi.com/view?r=eyJrIjoiMTJjNDA1ODAtNGVhMC00MzRlLWI3ZTctOTY4NmUwNmNmZWUyIiwidCI6IjQxMzYwMGNmLWJkNGUtNGM3Yy04YTYxLTY5ZTczY2RkZjczMSIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2026 Fergal Dorian KOLAT DJOKO. Tous droits réservés.</p>
+                <p>Portfolio conçu avec ❤️ et du code</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
