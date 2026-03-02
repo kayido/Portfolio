@@ -332,6 +332,18 @@ const projectsData = {
         demo : true,
         demoURL : "https://new2cxxtemyjmi9wxif97g.streamlit.app/",
         GitHubURL : "https://github.com/kayido/streamlit_app-fuel-in-france"
+    },
+    powerBI_gallery : {
+        title: "Power BI Gallery",
+        image: "assets/projects/Microsoft-Power-BI-Logo.png",
+        description: "",
+        tech: ['Power BI', 'DAX'],
+        features: [
+            "Rapport des données pharmaceutiques en Allemagne et en Pologne",
+            " Rapport des données clients d'une banque et leur légitimité à un accord de crédit"
+        ],
+        demo : true,
+        demoURL : "/powerbi.html"
     }
 };
 
