@@ -343,7 +343,7 @@ const projectsData = {
             " Rapport des données clients d'une banque et leur légitimité à un accord de crédit"
         ],
         demo : true,
-        demoURL : "powerbi.html"
+        demoURL : "powerBI.html"
     }
 };
 
