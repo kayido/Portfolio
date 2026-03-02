@@ -246,7 +246,8 @@ const projectsData = {
             "Visualisation interactive avec Power BI",
             "Dashboard temps réel pour analyse"
         ],
-        demo : false
+        demo : false,
+        GitHubURL : ""
     },
     cinema: {
         title: "Pipeline de traitement des données cinématographiques",
@@ -261,7 +262,8 @@ const projectsData = {
             "Requêtage SQL avec Hive",
             "Pipeline ETL optimisé"
         ]
-        ,demo : false
+        ,demo : false,
+        GitHubURL : "https://github.com/kayido/Pipeline_movielens_Spark_Hadoop"
     },
     ecommerce: {
         title: "Plateforme e-commerce avec Java Spring boot",
@@ -276,7 +278,8 @@ const projectsData = {
             "Base de données relationnelle",
             "Architecture microservices"
         ],
-        demo : false
+        demo : false,
+        GitHubURL : "https://github.com/kayido/e-commerce-website-API"
     },
     scala: {
         title: "Pipeline de traitement des données des pays en Scala",
@@ -290,7 +293,9 @@ const projectsData = {
             "Optimisation des performances",
             "Code scalable et maintenable"
         ],
-        demo : false
+        demo : false,
+        demoURL : "",
+        GitHubURL : "https://github.com/kayido/Pipeline-de-traitement-des-donn-es-de-pays-en-Scala"
     },
     poubelles: {
         title: "Plateforme de Détection intelligente des états des poubelles publiques",
@@ -308,7 +313,8 @@ const projectsData = {
             "Visualisation des résultats avec Chart.js"
 
         ],
-        demo : false
+        demo : false,
+        GitHubURL : "https://github.com/kayido"
     },
     carburants : {
         title: "Plateforme de visualisation des prix des carburants en France",
